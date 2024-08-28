@@ -9,7 +9,13 @@ interface RedirectProps {
 
 export default function Redirect({ href, className, children }: RedirectProps) {
   return (
-    <Link href={href} className={cn("w-12 transition-all hover:font-medium hover:text-zinc-50", className)}>
+    <Link
+      href={href}
+      className={cn(
+        "transition-all duration-300 ease-linear hover:mb-[-5px] hover:border-b-2 hover:border-secondary hover:text-secondary",
+        className,
+      )}
+    >
       {children}{" "}
     </Link>
   );
