@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className="mx-auto w-full max-w-[1600px] px-12">
+    <div className="mx-auto w-full max-w-[1200px] px-12">
       <div className="flex items-center justify-between py-10">
         <div className="flex items-center gap-20">
           <Image src="/logo-header.png" alt="Logo" width={200} height={200} />

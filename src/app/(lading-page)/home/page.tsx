@@ -1,3 +1,4 @@
+import Button from "@/app/components/button";
 import Header from "@/app/components/header";
 import Image from "next/image";
 
@@ -5,21 +6,23 @@ export default function Home() {
   return (
     <div className="h-screen bg-zinc-950 bg-home bg-no-repeat text-zinc-50">
       <Header />
-      <main className="mx-auto flex w-full max-w-[1600px] flex-col gap-10 px-12 pt-10">
+      <main className="mx-auto flex w-full max-w-[1200px] flex-col gap-10 px-12 pt-10">
         <div className="flex items-center gap-20">
-          <h1 className="font-CoHeadlineBold flex-1 text-[3.4rem] font-bold leading-tight">
+          <h1 className="flex-1 font-CoHeadlineBold text-[3.4rem] font-bold leading-tight">
             O melhor lugar para encontrar a{" "}
             <span className="text-secondary">casa dos seus sonhos</span>
           </h1>
+
           <div className="flex-1 space-y-6 px-5">
             <span className="font-light">
-              Sou <span className="font-medium">Artur Ribeiro</span>, corretor
-              de imóveis, auxiliando-o na COMPRA, VENDA ou ALUGUEL do seu
-              imóvel. Vamos conversar?
+              Sou{" "}
+              <span className="font-medium text-secondary">Artur Ribeiro</span>,
+              corretor de imóveis, auxiliando-o na COMPRA, VENDA ou ALUGUEL do
+              seu imóvel. Vamos conversar?
             </span>
-            <button className="flex rounded-lg bg-primary px-4 py-2 font-medium text-zinc-50 shadow-md transition-all hover:brightness-75">
-              Entre em contato
-            </button>
+
+            <Button>Entre em contato</Button>
+
             <div className="flex gap-12">
               <div className="flex flex-col">
                 <p className="text-lg font-semibold">
@@ -32,7 +35,7 @@ export default function Home() {
                 <p className="text-lg font-semibold">
                   500<span className="text-secondary">+</span>
                 </p>
-                <span className="text-xs">Familias</span>
+                <span className="text-xs">Famílias</span>
                 <span className="text-xs">felizes</span>
               </div>
               <div className="flex flex-col">
