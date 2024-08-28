@@ -10,3 +10,11 @@
     rgba(0, 0, 0, 1) 100%
   );
 }
+
+@font-face {
+  font-family: "CoHeadlineBold";
+  src: url(../../public/fonts/co-deadline-bold.otf) format("truetype"); 
+  font-weight: normal;
+  font-style: normal;
+}
+

@@ -9,9 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#F15A29",
-        secondary: "#FFFFFF",
-        tertiary: "#f3f3f3",
+        primary: "#005CCB",
+        secondary: "#56BFF4",
+        tertiary: "#A1A1A1",
+      },
+      fontFamily: {
+        CoHeadlineBold: ["CoHeadlineBold", "sans-serif"],
+        CoText: ["CoText", "sans-serif"],
       },
       backgroundImage: {
         home: "url('/bg.png')",
