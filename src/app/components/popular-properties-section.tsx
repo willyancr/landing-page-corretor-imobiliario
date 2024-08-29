@@ -45,7 +45,9 @@ export default function PopularPropertiesSection() {
   return (
     <div className="mx-auto h-screen max-w-[1200px] space-y-8 px-12 pt-5">
       <div className="flex items-center justify-between">
-        <h1 className="text-4xl font-bold">Imóveis em destaque</h1>
+        <h1 className="font-CoHeadlineBold text-4xl font-bold">
+          Imóveis em destaque
+        </h1>
         <Link
           href="/imoveis"
           className="flex items-center gap-1 transition-all hover:text-primary"

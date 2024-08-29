@@ -1,6 +1,7 @@
 import Button from "@/app/components/button";
 import Header from "@/app/components/header";
 import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Home() {
   return (
@@ -21,7 +22,16 @@ export default function Home() {
               seu imóvel. Vamos conversar?
             </span>
 
-            <Button>Entre em contato</Button>
+            <Button>
+              <a
+                href="https://api.whatsapp.com/message/T65AYX4JNWVCO1?autoload=1&app_absent=0"
+                target="_blank"
+                className="flex items-center gap-2 transition-all hover:text-secondary"
+              >
+                <FaWhatsapp size={20} />
+                Entre em contato
+              </a>
+            </Button>
 
             <div className="flex gap-12">
               <div className="flex flex-col">
