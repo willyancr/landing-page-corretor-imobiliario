@@ -1,13 +1,15 @@
+"use client";
 import { KeyRound } from "lucide-react";
-import Redirect from "./redirect";
 import Image from "next/image";
+import Redirect from "./redirect";
 
 export default function Header() {
   return (
-    <div className="mx-auto w-full max-w-[1200px] px-12">
+    <header className="mx-auto w-full max-w-[1200px] px-12">
       <div className="flex items-center justify-between py-10">
         <div className="flex items-center gap-20">
           <Image src="/logo-header.png" alt="Logo" width={200} height={200} />
+
           <nav className="flex h-6 justify-center gap-8 font-extralight text-zinc-50/70">
             <Redirect href="/">Home</Redirect>
             <Redirect href="/sobre">Sobre</Redirect>
@@ -20,6 +22,6 @@ export default function Header() {
           <KeyRound size={18} />
         </button>
       </div>
-    </div>
+    </header>
   );
 }

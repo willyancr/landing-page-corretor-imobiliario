@@ -8,7 +8,7 @@ import {
 
 export default function DreamHomeSection() {
   return (
-    <div className="bg-greyGeometry mx-auto h-screen max-w-[1200px] space-y-8 px-12 pt-32">
+    <div className="mx-auto h-screen max-w-[1200px] space-y-8 bg-greyGeometry px-12 pt-32">
       <div className="flex items-center gap-20">
         <Image
           src="/dream-home.png"
