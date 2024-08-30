@@ -78,7 +78,20 @@
 
 @font-face {
   font-family: "CoHeadlineBold";
-  src: url(../../public/fonts/co-deadline-bold.otf) format("truetype"); 
+  src: url(../../public/fonts/co-deadline-bold.otf) format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #374151;
+}
+/* Cor do scrollbar */
+*::-webkit-scrollbar-thumb {
+  background-color: #005ccb;
+  border-radius: 14px;
 }

@@ -6,7 +6,7 @@ import Redirect from "./redirect";
 export default function Header() {
   return (
     <header className="mx-auto w-full max-w-[1200px] px-12">
-      <div className="flex items-center justify-between py-10">
+      <div className="flex items-center justify-between py-5">
         <div className="flex items-center gap-20">
           <Image src="/logo-header.png" alt="Logo" width={200} height={200} />
 
