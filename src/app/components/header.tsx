@@ -8,12 +8,12 @@ export default function Header() {
     <header className="mx-auto w-full max-w-[1200px] px-12">
       <div className="flex items-center justify-between py-5">
         <div className="flex items-center gap-20">
-          <Image src="/logo-header.png" alt="Logo" width={200} height={200} />
+          <Image src="/logo-header.png" alt="Logo" width={200} height={200} quality={100} />
 
           <nav className="flex h-6 justify-center gap-8 font-extralight text-zinc-50/70">
             <Redirect href="/">Home</Redirect>
-            <Redirect href="/sobre">Sobre</Redirect>
             <Redirect href="/imoveis">Imóveis</Redirect>
+            <Redirect href="/sobre">Sobre</Redirect>
             <Redirect href="/blog">Blog</Redirect>
           </nav>
         </div>

@@ -1,5 +1,6 @@
 import Header from "@/app/components/header";
 import InputSearchState from "@/app/components/input-search-state";
+import RealEstate from "@/app/components/real-estate";
 import Image from "next/image";
 
 export default function Imoveis() {
@@ -31,6 +32,7 @@ export default function Imoveis() {
           <InputSearchState />
         </div>
       </div>
+      <RealEstate />
     </div>
   );
 }

@@ -28,8 +28,8 @@ export default function Home() {
                 target="_blank"
                 className="flex items-center gap-2 transition-all hover:text-secondary"
               >
-                <FaWhatsapp size={20} />
                 Entre em contato
+                <FaWhatsapp size={20} />
               </a>
             </Button>
 

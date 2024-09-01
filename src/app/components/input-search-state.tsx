@@ -1,18 +1,17 @@
-import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import {
   Select,
-  SelectTrigger,
-  SelectValue,
   SelectContent,
   SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from "@/components/ui/select";
 import {
-  MapPinIcon,
-  HomeIcon,
-  FileTextIcon,
-  SearchIcon,
   BedDouble,
+  HomeIcon,
+  MapPinIcon,
+  SearchIcon
 } from "lucide-react";
 
 export default function InputSearchState() {
