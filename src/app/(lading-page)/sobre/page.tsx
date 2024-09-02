@@ -7,8 +7,8 @@ export default function About() {
   return (
     <div className="h-screen">
       <Header />
-      <section className="mx-auto w-full max-w-[1200px] bg-greyGeometry p-12">
-        <div className="flex items-center gap-20">
+      <section className="w-full bg-greyGeometry p-12">
+        <div className="mx-auto flex max-w-[1200px] items-center gap-20 px-12">
           <div className="flex flex-1 flex-col gap-10">
             <h1 className="font-CoHeadlineBold text-6xl font-bold text-primary">
               Artur Ribeiro

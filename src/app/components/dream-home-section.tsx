@@ -8,8 +8,8 @@ import {
 
 export default function DreamHomeSection() {
   return (
-    <div className="my-text-mt mx-auto max-w-[1200px] bg-greyGeometry px-12 py-12">
-      <div className="flex items-center gap-20">
+    <div className="my-text-mt  bg-greyGeometry px-12 py-12">
+      <div className="flex items-center gap-20 max-w-[1200px] px-12 mx-auto">
         <Image
           src="/dream-home.png"
           alt="Dream Home"
