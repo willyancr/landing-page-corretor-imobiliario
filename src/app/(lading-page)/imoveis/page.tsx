@@ -8,7 +8,7 @@ export default function Imoveis() {
   return (
     <div className="h-screen">
       <Header />
-      <div className="relative mx-auto w-full max-w-[1200px]">
+      <div className="relative mx-auto w-full ">
         <Image
           src="/bg-imoveis.png"
           alt="Logo"
