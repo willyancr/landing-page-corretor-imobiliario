@@ -66,16 +66,16 @@ export default function PopularPropertiesSection() {
         {cardsProperties.map((card) => (
           <div
             key={card.id}
-            className="flex w-[350px] flex-col gap-4 lg:w-[300px]"
+            className="flex w-[460px] flex-col gap-4 md:w-[410px] lg:w-[280px] xl:w-[340px]"
           >
             <Link href="/detalhes-imoveis/">
               <Image
                 src={card.image}
-                alt="Image 1"
+                alt="Imagem do imóvel"
                 width={300}
                 height={300}
                 quality={100}
-                className="lg:w-[300px] w-[370px]  rounded-md shadow-md transition-all duration-200 ease-linear hover:scale-105"
+                className="w-[460px] rounded-md shadow-md transition-all duration-200 ease-linear hover:scale-105 md:w-[410px] lg:w-[280px] xl:w-[340px]"
               />
             </Link>
             <div className="w-32 border-b-2 border-zinc-950" />
@@ -84,15 +84,15 @@ export default function PopularPropertiesSection() {
               <span className="text-sm">{card.title}</span>
             </div>
             <div className="w-full border-b-[1px] border-zinc-200" />
-            <div className="flex items-center justify-between">
-              <div className="flex w-24 items-center justify-center gap-1 rounded-md bg-tertiary/30 px-3 py-2 text-sm">
+            <div className="flex items-center gap-3 lg:justify-between">
+              <div className="flex w-[100px] items-center justify-center gap-1 rounded-md bg-tertiary/30 px-3 py-2 text-sm xl:w-28 xl:text-sm">
                 <House size={16} />
                 1500m²
               </div>
-              <div className="flex w-24 items-center justify-center gap-1 rounded-md bg-tertiary/30 px-3 py-2 text-sm">
+              <div className="flex w-[100px] items-center justify-center gap-1 rounded-md bg-tertiary/30 px-3 py-2 text-sm xl:w-28 xl:text-sm">
                 <BedDouble size={16} /> 6
               </div>
-              <div className="flex w-24 items-center justify-center gap-1 rounded-md bg-tertiary/30 px-3 py-2 text-sm">
+              <div className="flex w-[100px] items-center justify-center gap-1 rounded-md bg-tertiary/30 px-3 py-2 text-sm xl:w-28 xl:text-sm">
                 <Bath size={16} /> 3
               </div>
             </div>
