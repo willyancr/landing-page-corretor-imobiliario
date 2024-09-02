@@ -8,23 +8,24 @@ import {
 
 export default function DreamHomeSection() {
   return (
-    <div className="my-text-mt  bg-greyGeometry px-12 py-12">
-      <div className="flex items-center gap-20 max-w-[1200px] px-12 mx-auto">
+    <div className="my-text-mt bg-greyGeometry px-12 py-12">
+      <div className="mx-auto flex max-w-[1200px] items-center gap-20 px-12">
         <Image
           src="/dream-home.png"
           alt="Dream Home"
           width={450}
           height={500}
           quality={100}
+          className="mx-auto h-[500px] w-full rounded-lg object-cover"
         />
         <div className="space-y-12">
-          <h1 className="font-CoHeadlineBold text-5xl">
+          <h1 className="font-CoHeadlineBold text-4xl lg:text-5xl">
             Com a gente você encontra a casa dos seus sonhos
           </h1>
           <div>
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="item-1">
-                <AccordionTrigger className="text-xl">
+                <AccordionTrigger className="text-lg lg:text-xl">
                   Você quer comprar?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -36,7 +37,7 @@ export default function DreamHomeSection() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-2">
-                <AccordionTrigger className="text-xl">
+                <AccordionTrigger className="text-lg lg:text-xl">
                   Você quer vender?
                 </AccordionTrigger>
                 <AccordionContent>
@@ -47,7 +48,7 @@ export default function DreamHomeSection() {
                 </AccordionContent>
               </AccordionItem>
               <AccordionItem value="item-3">
-                <AccordionTrigger className="text-xl">
+                <AccordionTrigger className="text-lg lg:text-xl">
                   Você quer alugar ou locar?
                 </AccordionTrigger>
                 <AccordionContent>

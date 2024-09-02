@@ -10,7 +10,7 @@ export default function About() {
       <section className="w-full bg-greyGeometry p-12">
         <div className="mx-auto flex max-w-[1200px] items-center gap-20 px-12">
           <div className="flex flex-1 flex-col gap-10">
-            <h1 className="font-CoHeadlineBold text-6xl font-bold text-primary">
+            <h1 className="font-CoHeadlineBold lg:text-6xl text-5xl font-bold text-primary">
               Artur Ribeiro
             </h1>
             <p className="text-3xl font-bold">Sobre mim</p>

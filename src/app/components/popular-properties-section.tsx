@@ -62,9 +62,12 @@ export default function PopularPropertiesSection() {
           />
         </Link>
       </div>
-      <div className="flex flex-wrap justify-between gap-10">
+      <div className="flex flex-wrap justify-center gap-10 xl:justify-between">
         {cardsProperties.map((card) => (
-          <div key={card.id} className="flex w-[300px] flex-col gap-4">
+          <div
+            key={card.id}
+            className="flex w-[350px] flex-col gap-4 lg:w-[300px]"
+          >
             <Link href="/detalhes-imoveis/">
               <Image
                 src={card.image}
@@ -72,7 +75,7 @@ export default function PopularPropertiesSection() {
                 width={300}
                 height={300}
                 quality={100}
-                className="rounded-md shadow-md transition-all duration-200 ease-linear hover:scale-105"
+                className="lg:w-[300px] w-[370px]  rounded-md shadow-md transition-all duration-200 ease-linear hover:scale-105"
               />
             </Link>
             <div className="w-32 border-b-2 border-zinc-950" />
