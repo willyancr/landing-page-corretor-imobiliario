@@ -1,13 +1,15 @@
 import PopularPropertiesSection from "@/app/components/popular-properties-section";
-import Home from "../home/page";
-import DreamHomeSection from "@/app/components/dream-home-section";
 import NewsletterSection from "@/app/components/newsletter-section";
+import DreamHomeSection from "@/app/components/dream-home-section";
+import MainHome from "@/app/components/main-home";
+import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
 
-export default function HeroPage() {
+export default function Home() {
   return (
-    <div>
-      <Home />
+    <div className="h-screen bg-zinc-950 bg-home">
+      <Header />
+      <MainHome />
       <PopularPropertiesSection />
       <DreamHomeSection />
       <NewsletterSection />

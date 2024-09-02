@@ -83,6 +83,18 @@
   font-style: normal;
 }
 
+@media (min-height: 700px) {
+  .my-text-mt {
+    @apply mt-10;
+  }
+  .image-home {
+    @apply h-[350px] w-[1100px] rounded-lg object-cover;
+  }
+  .image-home-hidden{
+    @apply hidden;
+  }
+}
+
 *::-webkit-scrollbar {
   width: 8px;
 }

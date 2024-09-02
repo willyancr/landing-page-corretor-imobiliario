@@ -5,12 +5,11 @@ import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa6";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
-import Footer from "./footer";
 
 export default function PropertyDetails() {
   const router = useRouter();
   return (
-    <div className="mx-auto h-screen max-w-[1200px] space-y-10 px-12 py-10">
+    <div className="mx-auto max-w-[1200px] space-y-10 px-12 py-10">
       <div className="m-auto flex w-[450px] flex-col gap-5">
         <h1 className="font-CoHeadlineBold text-5xl font-bold">
           Detalhes do imóvel
@@ -155,7 +154,6 @@ export default function PropertyDetails() {
           </div>
         </div>
       </div>
-      <Footer />
     </div>
   );
 }

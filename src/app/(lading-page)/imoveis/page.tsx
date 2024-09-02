@@ -2,6 +2,7 @@ import Header from "@/app/components/header";
 import InputSearchState from "@/app/components/input-search-state";
 import RealEstate from "@/app/components/real-estate";
 import Image from "next/image";
+import Footer from "@/app/components/footer";
 
 export default function Imoveis() {
   return (
@@ -25,6 +26,7 @@ export default function Imoveis() {
               height={70}
               quality={100}
             />
+
             <h1 className="font-CoHeadlineBold">
               Encontre seu imovél favorito
             </h1>
@@ -33,6 +35,7 @@ export default function Imoveis() {
         </div>
       </div>
       <RealEstate />
+      <Footer />
     </div>
   );
 }

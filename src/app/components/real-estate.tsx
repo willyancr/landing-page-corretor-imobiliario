@@ -79,9 +79,9 @@ export default function RealEstate() {
   ];
 
   return (
-    <div className="mx-auto h-screen max-w-[1200px] space-y-8 px-12 pt-5">
+    <div className="mx-auto max-w-[1200px] space-y-8 px-12 my-12">
       <div className="flex gap-4">
-        <h1 className="font-CoHeadlineBold text-4xl font-bold">
+        <h1 className="font-CoHeadlineBold text-4xl font-bold ">
           Imóveis disponíveis
         </h1>
         <Image
@@ -94,7 +94,7 @@ export default function RealEstate() {
         />
       </div>
 
-      <div className="flex flex-wrap justify-between gap-14 py-10">
+      <div className="flex flex-wrap justify-between gap-14 ">
         {cardsProperties.map((card) => (
           <div key={card.id} className="flex w-[300px] flex-col gap-4">
             <Link href="/detalhes-imoveis/">

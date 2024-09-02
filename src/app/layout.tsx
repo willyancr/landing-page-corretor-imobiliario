@@ -9,9 +9,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Artur Ribeiro | Corretor de Imóveis",
+  title: "Artur Ribeiro | Consultor Imobiliário",
   description:
-    "Site de apresentação do corretor de imóveis Artur Ribeiro, onde você pode encontrar informações sobre ele e seus serviços.",
+    "Site de apresentação do consultor imobiliário Artur Ribeiro, onde você pode encontrar informações sobre ele e seus serviços.",
   icons: {
     icon: "/favicon.ico",
   },

@@ -7,7 +7,7 @@ export default function About() {
   return (
     <div className="h-screen">
       <Header />
-      <section className="mx-auto h-screen w-full max-w-[1200px] bg-greyGeometry p-12">
+      <section className="mx-auto w-full max-w-[1200px] bg-greyGeometry p-12">
         <div className="flex items-center gap-20">
           <div className="flex flex-1 flex-col gap-10">
             <h1 className="font-CoHeadlineBold text-6xl font-bold text-primary">
@@ -40,6 +40,7 @@ export default function About() {
               height={500}
               quality={100}
             />
+            <span>** no lugar da logo, por foto profissional</span>
           </div>
         </div>
       </section>

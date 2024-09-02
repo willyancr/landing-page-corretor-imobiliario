@@ -7,6 +7,7 @@ export default function DetalhesImoveis() {
     <div className="h-screen">
       <Header />
       <PropertyDetails />
+      <Footer />
     </div>
   );
 }

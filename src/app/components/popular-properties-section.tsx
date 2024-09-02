@@ -43,8 +43,8 @@ export default function PopularPropertiesSection() {
   ];
 
   return (
-    <div className="mx-auto h-screen max-w-[1200px] space-y-8 px-12 pt-5">
-      <div className="flex items-center justify-between">
+    <div className="my-text-mt mx-auto max-w-[1200px] space-y-8 px-12 py-12">
+      <div className="mb-20 flex items-center justify-between">
         <h1 className="font-CoHeadlineBold text-4xl font-bold">
           Imóveis em destaque
         </h1>
@@ -65,14 +65,16 @@ export default function PopularPropertiesSection() {
       <div className="flex flex-wrap justify-between gap-10">
         {cardsProperties.map((card) => (
           <div key={card.id} className="flex w-[300px] flex-col gap-4">
-            <Image
-              src={card.image}
-              alt="Image 1"
-              width={300}
-              height={300}
-              quality={100}
-              className="rounded-md shadow-md transition-all duration-200 ease-linear hover:scale-105"
-            />
+            <Link href="/detalhes-imoveis/">
+              <Image
+                src={card.image}
+                alt="Image 1"
+                width={300}
+                height={300}
+                quality={100}
+                className="rounded-md shadow-md transition-all duration-200 ease-linear hover:scale-105"
+              />
+            </Link>
             <div className="w-32 border-b-2 border-zinc-950" />
             <div className="flex flex-col">
               <span className="text-2xl font-semibold">{card.price}</span>
