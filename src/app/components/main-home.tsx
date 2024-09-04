@@ -1,6 +1,7 @@
 import Button from "@/app/components/button";
 import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa6";
+import MetricsSummary from "./metrics-summary";
 
 export default function MainHome() {
   return (
@@ -12,10 +13,9 @@ export default function MainHome() {
         </h1>
 
         <div className="flex-1 space-y-6 px-5">
-          <span className="font-light ">
-            Sou{" "}
-            <span className="font-medium text-zinc-950">Artur Ribeiro</span>,
-            consultor imobiliário, auxiliando-o na COMPRA, VENDA ou ALUGUEL do
+          <span className="font-light">
+            Sou <span className="font-medium text-zinc-950">Artur Ribeiro</span>
+            , consultor imobiliário, auxiliando-o na COMPRA, VENDA ou ALUGUEL do
             seu imóvel. Vamos conversar?
           </span>
 
@@ -30,29 +30,7 @@ export default function MainHome() {
             </a>
           </Button>
 
-          <div className="flex gap-12 ">
-            <div className="flex flex-col">
-              <p className="text-lg font-semibold">
-                500<span className="text-zinc-950">+</span>
-              </p>
-              <span className="text-xs">Imóveis</span>
-              <span className="text-xs">anunciados</span>
-            </div>
-            <div className="flex flex-col">
-              <p className="text-lg font-semibold">
-                500<span className="text-zinc-950">+</span>
-              </p>
-              <span className="text-xs">Famílias</span>
-              <span className="text-xs">felizes</span>
-            </div>
-            <div className="flex flex-col">
-              <p className="text-lg font-semibold">
-                09<span className="text-zinc-950">+</span>
-              </p>
-              <span className="text-xs">Anos atuando</span>
-              <span className="text-xs">no mercado</span>
-            </div>
-          </div>
+          <MetricsSummary />
         </div>
       </div>
       <div className="flex justify-center gap-20">

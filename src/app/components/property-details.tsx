@@ -1,20 +1,24 @@
 "use client";
-import { House, BedDouble, Bath, CircleCheckBig } from "lucide-react";
-import CardFormContact from "./card-form-contact";
 import { Button } from "@/components/ui/button";
-import { FaWhatsapp } from "react-icons/fa6";
-import { useRouter } from "next/navigation";
+import { Bath, BedDouble, House } from "lucide-react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { FaWhatsapp } from "react-icons/fa6";
+import CardFormContact from "./card-form-contact";
+import PropertyFeaturesList from "./property-features-list";
 
 export default function PropertyDetails() {
   const router = useRouter();
+
   return (
     <div className="mx-auto max-w-[1200px] space-y-10 px-12 py-10">
       <div className="m-auto flex w-[450px] flex-col gap-5">
         <h1 className="font-CoHeadlineBold text-5xl font-bold">
           Detalhes do imóvel
         </h1>
+
         <span className="text-center text-sm">Home / Imóveis / Detalhes</span>
+
         <div className="flex items-center justify-center gap-4">
           <Button className="w-44">
             <a
@@ -43,9 +47,11 @@ export default function PropertyDetails() {
           quality={100}
           className="mx-auto h-[500px] w-full rounded-lg object-cover"
         />
+        
         <span className="absolute left-6 top-6 w-fit rounded-lg bg-zinc-50 px-3 py-2 font-semibold shadow-xl">
           R$ 5.000.000
         </span>
+        
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-medium">Casa no centro, Palmas - TO</h2>
           <div className="flex items-center gap-2">
@@ -61,7 +67,9 @@ export default function PropertyDetails() {
             </div>
           </div>
         </div>
+        
         <div className="my-10 w-full border-b-[1px] border-zinc-200" />
+
         <div className="mb-10 flex items-center justify-between gap-12">
           <div className="flex-1 space-y-5">
             <h1 className="text-2xl font-medium">Sobre a propriedade</h1>
@@ -96,49 +104,19 @@ export default function PropertyDetails() {
               </p>
             </div>
           </div>
+
           <div className=" ">
             <CardFormContact />
           </div>
         </div>
-        <div className="space-y-5">
-          <h1 className="text-2xl font-medium">Comodidades da propriedade</h1>
-          <ul className="flex flex-wrap gap-20">
-            <div className="space-y-2">
-              <li className="flex items-center gap-2">
-                <CircleCheckBig size={16} /> Aquecimento central
-              </li>
-              <li className="flex items-center gap-2">
-                <CircleCheckBig size={16} /> Ar condicionado central
-              </li>
-              <li className="flex items-center gap-2">
-                <CircleCheckBig size={16} /> Jadim
-              </li>
-              <li className="flex items-center gap-2">
-                <CircleCheckBig size={16} /> Lavanderia
-              </li>
-              <li className="flex items-center gap-2">
-                <CircleCheckBig size={16} /> Piscina
-              </li>
-            </div>
-            <div className="space-y-2">
-              <li className="flex items-center gap-2">
-                <CircleCheckBig size={16} /> Wifi
-              </li>
-              <li className="flex items-center gap-2">
-                <CircleCheckBig size={16} /> Garagem 6 vagas
-              </li>
-              <li className="flex items-center gap-2">
-                <CircleCheckBig size={16} /> Cameras de segurança
-              </li>
-              <li className="flex items-center gap-2">
-                <CircleCheckBig size={16} /> Home Theatre
-              </li>
-            </div>
-          </ul>
-        </div>
+
+        <PropertyFeaturesList />
+
         <div className="my-10 w-full border-b-[1px] border-zinc-200" />
+
         <div className="mb-10 space-y-5">
           <h1 className="text-2xl font-medium">Galeria do imóvel</h1>
+          
           <div className="flex flex-wrap justify-center gap-4">
             {Array.from({ length: 6 }, (_, i) => (
               <Image

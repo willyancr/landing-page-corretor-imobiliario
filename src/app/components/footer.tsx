@@ -6,6 +6,7 @@ import {
   FaYoutube,
   FaXTwitter,
 } from "react-icons/fa6";
+import RedirectMidiaSocial from "./redirect-midia-social";
 
 export default function Footer() {
   return (
@@ -43,39 +44,27 @@ export default function Footer() {
             </div>
             <div className="space-y-4">
               <span className="font-medium text-primary">Redes Sociais</span>
+
               <div className="flex flex-col gap-2">
-                <a
-                  href="https://www.instagram.com/arturfilhoo/"
-                  target="_blank"
-                  className="flex items-center gap-2 transition-all hover:text-secondary"
-                >
+                <RedirectMidiaSocial href="https://www.instagram.com/arturfilhoo/">
                   <FaInstagram />
                   Instagram
-                </a>
-                <a
-                  href="https://api.whatsapp.com/message/T65AYX4JNWVCO1?autoload=1&app_absent=0"
-                  target="_blank"
-                  className="flex items-center gap-2 transition-all hover:text-secondary"
-                >
+                </RedirectMidiaSocial>
+
+                <RedirectMidiaSocial href="https://api.whatsapp.com/message/T65AYX4JNWVCO1?autoload=1&app_absent=0">
                   <FaWhatsapp />
                   WhatsApp
-                </a>
-                <a
-                  href="https://www.youtube.com/?gl=BR"
-                  target="_blank"
-                  className="flex items-center gap-2 transition-all hover:text-secondary"
-                >
+                </RedirectMidiaSocial>
+
+                <RedirectMidiaSocial href="https://www.youtube.com/?gl=BR">
                   <FaYoutube />
                   Youtube
-                </a>
-                <a
-                  href="https://x.com/home"
-                  target="_blank"
-                  className="flex items-center gap-2 transition-all hover:text-secondary"
-                >
+                </RedirectMidiaSocial>
+
+                <RedirectMidiaSocial href="https://x.com/home">
                   <FaXTwitter />
                   X/Twitter
-                </a>
+                </RedirectMidiaSocial>
               </div>
             </div>
           </nav>
