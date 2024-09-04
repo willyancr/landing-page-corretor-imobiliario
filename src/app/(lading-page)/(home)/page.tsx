@@ -7,7 +7,7 @@ import Footer from "@/app/components/footer";
 
 export default function Home() {
   return (
-    <div className="h-screen background ">
+    <div className="h-screen background">
       <Header />
       <MainHome />
       <PopularPropertiesSection />

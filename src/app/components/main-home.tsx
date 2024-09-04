@@ -13,7 +13,7 @@ export default function MainHome() {
         </h1>
 
         <div className="flex-1 space-y-6 px-5">
-          <span className="font-light">
+          <span>
             Sou <span className="font-medium text-zinc-950">Artur Ribeiro</span>
             , consultor imobiliário, auxiliando-o na COMPRA, VENDA ou ALUGUEL do
             seu imóvel. Vamos conversar?
