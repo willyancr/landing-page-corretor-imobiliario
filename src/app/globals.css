@@ -67,14 +67,10 @@
     @apply bg-background text-foreground;
   }
 }
-/* .background {
-  background: rgb(23, 23, 23);
-  background: linear-gradient(
-    236deg,
-    rgba(23, 23, 23, 1) 0%,
-    rgba(0, 0, 0, 1) 100%
-  );
-} */
+.background {
+  background: rgb(86,191,244);
+background: radial-gradient(circle, rgba(86,191,244,1) 0%, rgba(0,92,203,1) 90%);
+}
 
 @font-face {
   font-family: "CoHeadlineBold";
@@ -90,7 +86,7 @@
   .image-home {
     @apply h-[350px] w-[1100px] rounded-lg object-cover;
   }
-  .image-home-hidden{
+  .image-home-hidden {
     @apply hidden;
   }
 }
@@ -100,10 +96,10 @@
 }
 
 *::-webkit-scrollbar-track {
-  background: #374151;
+  background: #000000;
 }
 /* Cor do scrollbar */
 *::-webkit-scrollbar-thumb {
-  background-color: #005ccb;
+  background-color: #374151;
   border-radius: 14px;
 }

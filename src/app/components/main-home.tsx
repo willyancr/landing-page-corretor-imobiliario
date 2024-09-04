@@ -8,13 +8,13 @@ export default function MainHome() {
       <div className="flex items-center gap-20">
         <h1 className="flex-1 font-CoHeadlineBold text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
           O melhor lugar para encontrar a{" "}
-          <span className="text-secondary">casa dos seus sonhos</span>
+          <span className="text-zinc-950">casa dos seus sonhos</span>
         </h1>
 
         <div className="flex-1 space-y-6 px-5">
-          <span className="font-light">
+          <span className="font-light ">
             Sou{" "}
-            <span className="font-medium text-secondary">Artur Ribeiro</span>,
+            <span className="font-medium text-zinc-950">Artur Ribeiro</span>,
             consultor imobiliário, auxiliando-o na COMPRA, VENDA ou ALUGUEL do
             seu imóvel. Vamos conversar?
           </span>
@@ -30,24 +30,24 @@ export default function MainHome() {
             </a>
           </Button>
 
-          <div className="flex gap-12">
+          <div className="flex gap-12 ">
             <div className="flex flex-col">
               <p className="text-lg font-semibold">
-                500<span className="text-secondary">+</span>
+                500<span className="text-zinc-950">+</span>
               </p>
               <span className="text-xs">Imóveis</span>
               <span className="text-xs">anunciados</span>
             </div>
             <div className="flex flex-col">
               <p className="text-lg font-semibold">
-                500<span className="text-secondary">+</span>
+                500<span className="text-zinc-950">+</span>
               </p>
               <span className="text-xs">Famílias</span>
               <span className="text-xs">felizes</span>
             </div>
             <div className="flex flex-col">
               <p className="text-lg font-semibold">
-                09<span className="text-secondary">+</span>
+                09<span className="text-zinc-950">+</span>
               </p>
               <span className="text-xs">Anos atuando</span>
               <span className="text-xs">no mercado</span>
@@ -62,7 +62,7 @@ export default function MainHome() {
           height={1000}
           alt="state home"
           quality={100}
-          className="image-home-hidden h-[220px] w-[510px] rounded-lg object-cover"
+          className="image-home-hidden h-[220px] w-[510px] rounded-lg object-cover shadow-xl"
         />
         <Image
           src="/state-home1.png"
@@ -70,7 +70,7 @@ export default function MainHome() {
           height={1000}
           alt="state home"
           quality={100}
-          className="image-home h-[220px] w-[510px] rounded-lg object-cover"
+          className="image-home h-[220px] w-[510px] rounded-lg object-cover shadow-2xl"
         />
       </div>
     </main>

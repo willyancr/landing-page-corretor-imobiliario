@@ -12,11 +12,11 @@ export default function Footer() {
     <div className="bg-zinc-950 bg-home bg-center">
       <div className="mx-auto max-w-[1200px] px-12 pb-6 pt-16 text-zinc-50">
         <div className="grid grid-cols-2 items-center">
-          <Image src="/logo-header.png" alt="Logo" width={200} height={200} />
+          <Image src="/logo-header1.png" alt="Logo" width={200} height={200} />
 
           <nav className="flex items-center gap-32 font-extralight">
             <div className="space-y-4">
-              <span className="font-medium">Footer Menu</span>
+              <span className="font-medium text-primary">Footer Menu</span>
               <div className="flex flex-col gap-2">
                 <Link href="/" className="transition-all hover:text-secondary">
                   Home
@@ -42,7 +42,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-4">
-              <span className="font-medium">Redes Sociais</span>
+              <span className="font-medium text-primary">Redes Sociais</span>
               <div className="flex flex-col gap-2">
                 <a
                   href="https://www.instagram.com/arturfilhoo/"
