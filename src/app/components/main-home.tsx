@@ -7,12 +7,12 @@ export default function MainHome() {
   return (
     <main className="my-text-mt mx-auto flex w-full max-w-[1200px] flex-col gap-10 px-12 py-10 text-zinc-50">
       <div className="flex items-center gap-20">
-        <h1 className="flex-1 font-CoHeadlineBold text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+        <h1 className="flex-1 font-CoHeadlineBold text-4xl font-bold leading-loose md:text-5xl lg:text-6xl">
           O melhor lugar para encontrar a{" "}
           <span className="text-zinc-950">casa dos seus sonhos</span>
         </h1>
 
-        <div className="flex-1 space-y-6 px-5">
+        <div className="flex-1 space-y-5 px-5">
           <span>
             Sou <span className="font-medium text-zinc-950">Artur Ribeiro</span>
             , consultor imobiliário, auxiliando-o na COMPRA, VENDA ou ALUGUEL do
