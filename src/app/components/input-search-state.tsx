@@ -11,7 +11,8 @@ import {
   BedDouble,
   HomeIcon,
   MapPinIcon,
-  SearchIcon
+  SearchIcon,
+  ShapesIcon,
 } from "lucide-react";
 
 export default function InputSearchState() {
@@ -32,12 +33,13 @@ export default function InputSearchState() {
       <div className="flex items-center space-x-4">
         <Select>
           <SelectTrigger className="w-40">
-            <MapPinIcon className="h-5 w-5" />
-            <SelectValue placeholder="Localização" />
+            <ShapesIcon className="h-5 w-5" />
+            <SelectValue placeholder="Imoveis" />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="location1">Localização 1</SelectItem>
-            <SelectItem value="location2">Localização 2</SelectItem>
+            <SelectItem value="location1">Compra</SelectItem>
+            <SelectItem value="location2">Venda</SelectItem>
+            <SelectItem value="location2">Locação</SelectItem>
           </SelectContent>
         </Select>
         <Select>
