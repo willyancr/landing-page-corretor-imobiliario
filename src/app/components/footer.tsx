@@ -13,7 +13,19 @@ export default function Footer() {
     <div className="bg-zinc-950 bg-home bg-center">
       <div className="mx-auto max-w-[1200px] px-12 pb-6 pt-16 text-zinc-50">
         <div className="grid grid-cols-2 items-center">
-          <Image src="/logo-header1.png" alt="Logo" width={200} height={200} />
+          <div className="mt-8 flex flex-col gap-2">
+            <Image
+              src="/logo-header1.png"
+              alt="Logo"
+              width={200}
+              height={200}
+            />
+            <span className="text-sm text-zinc-300">
+              Quadra 405 Sul - LO 11 - Lote 12 - Sala 03
+            </span>
+            <span className="text-sm text-zinc-300">Palmas - TO </span>
+            <span className="text-sm text-zinc-300">CEP: 77015-613</span>
+          </div>
 
           <nav className="flex items-center gap-32 font-extralight">
             <div className="space-y-4">
