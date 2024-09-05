@@ -2,9 +2,9 @@ import { CircleCheckBig } from "lucide-react";
 
 export default function BadgeAbout() {
   const badges = [
-    { id: 1, tag: "Experiência mais de 9 Anos" },
+    { id: 1, tag: "Experiência mais de 10 Anos" },
     { id: 2, tag: "Atendimento Personalizado" },
-    { id: 3, tag: "Mais de 200 Imóveis Vendidos" },
+    { id: 3, tag: "Avaliações Positivas" },
     { id: 4, tag: "Satisfação Garantida" },
   ];
   return (

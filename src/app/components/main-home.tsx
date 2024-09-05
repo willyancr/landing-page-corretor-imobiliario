@@ -8,8 +8,8 @@ export default function MainHome() {
     <main className="my-text-mt mx-auto flex w-full max-w-[1200px] flex-col gap-10 px-12 py-10 text-zinc-50">
       <div className="flex items-center gap-20">
         <h1 className="flex-1 font-CoHeadlineBold text-4xl font-bold leading-loose md:text-5xl lg:text-6xl">
-          O melhor lugar para encontrar a{" "}
-          <span className="text-zinc-950">casa dos seus sonhos</span>
+          O melhor lugar para encontrar o{" "}
+          <span className="text-zinc-950">imóvel dos seus sonhos</span>
         </h1>
 
         <div className="flex-1 space-y-5 px-5">

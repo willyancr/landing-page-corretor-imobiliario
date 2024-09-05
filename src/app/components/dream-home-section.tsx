@@ -20,7 +20,7 @@ export default function DreamHomeSection() {
         />
         <div className="space-y-12">
           <h1 className="font-CoHeadlineBold text-4xl lg:text-5xl">
-            Com a gente você encontra a casa dos seus sonhos
+            Com a gente você encontra o imóvel dos seus sonhos
           </h1>
           <div>
             <Accordion type="single" collapsible className="w-full">
