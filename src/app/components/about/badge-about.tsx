@@ -1,11 +1,10 @@
 import { api } from "@/app/lib/axios";
-import { DataSobre } from "@/app/types/sobre";
+import { DataAbout } from "@/app/types/sobre";
 import { CircleCheckBig } from "lucide-react";
 import { useEffect, useState } from "react";
 
-
 export default function BadgeAbout() {
-  const [data, setData] = useState<DataSobre[]>([]);
+  const [data, setData] = useState<DataAbout[]>([]);
 
   useEffect(() => {
     api.get("/sobres?populate[diferencial]=*").then((response) => {
