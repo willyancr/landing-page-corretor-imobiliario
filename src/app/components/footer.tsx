@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import {
   FaInstagram,
   FaWhatsapp,
@@ -8,9 +6,11 @@ import {
   FaXTwitter,
 } from "react-icons/fa6";
 import RedirectMidiaSocial from "./redirect-midia-social";
-import { useEffect, useState } from "react";
 import { DataFooter } from "../types/footer";
+import { useEffect, useState } from "react";
 import { api } from "../lib/axios";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   const [data, setData] = useState<DataFooter[]>([]);
@@ -66,12 +66,9 @@ export default function Footer() {
                   >
                     Sobre
                   </Link>
-                  <Link
-                    href="/blog"
-                    className="transition-all hover:text-secondary"
-                  >
+                  <span className="transition-all hover:text-secondary">
                     Blog
-                  </Link>
+                  </span>
                 </div>
               </div>
               <div className="space-y-4">

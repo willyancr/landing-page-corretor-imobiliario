@@ -37,7 +37,7 @@ type Comodidade = {
 type Categoria = {
   data: {
     attributes: {
-      nome: string;
+      Titulo: string;
       slug: string;
     };
   };

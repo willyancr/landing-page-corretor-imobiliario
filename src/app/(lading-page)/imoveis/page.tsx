@@ -2,7 +2,12 @@ import InputSearchState from "@/app/components/real-state/input-search-state";
 import RealState from "@/app/components/real-state/real-state";
 import Header from "@/app/components/header";
 import Footer from "@/app/components/footer";
+import type { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Imóveis | Artur Ribeiro",
+};
 
 export default function Imoveis() {
   return (

@@ -1,7 +1,11 @@
+import PropertyDetails from "@/app/components/real-state/property-details";
 import Footer from "@/app/components/footer";
 import Header from "@/app/components/header";
-import PropertyDetails from "@/app/components/real-state/property-details";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Detalhes do Imóvel | Artur Ribeiro",
+};
 export default function DetalhesImoveis({
   params,
 }: {
