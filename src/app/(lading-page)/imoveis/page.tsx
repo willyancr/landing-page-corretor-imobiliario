@@ -1,8 +1,8 @@
+import InputSearchState from "@/app/components/real-state/input-search-state";
+import RealState from "@/app/components/real-state/real-state";
 import Header from "@/app/components/header";
-import InputSearchState from "@/app/components/input-search-state";
-import RealEstate from "@/app/components/real-estate";
-import Image from "next/image";
 import Footer from "@/app/components/footer";
+import Image from "next/image";
 
 export default function Imoveis() {
   return (
@@ -34,7 +34,7 @@ export default function Imoveis() {
           <InputSearchState />
         </div>
       </div>
-      <RealEstate />
+      <RealState />
       <Footer />
     </div>
   );
