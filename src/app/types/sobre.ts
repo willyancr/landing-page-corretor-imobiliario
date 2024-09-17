@@ -8,7 +8,7 @@ type Descricao = {
   children: Child[];
 };
 
-type Foto = {
+type FotoPerfil = {
   data: {
     attributes: {
       url: string;
@@ -16,14 +16,16 @@ type Foto = {
   };
 };
 
-export type DataHome = {
+type Diferencial = {
+  id: number;
+  diferencial: string;
+};
+
+export type DataAbout = {
   id: number;
   attributes: {
     descricao: Descricao[];
-    linkWhatsapp: string;
-    tituloPrincipal: string;
-    tituloPrincipalDestaque: string;
-    foto1: Foto;
-    foto2: Foto;
+    fotoPerfil: FotoPerfil;
+    diferencial: Diferencial[];
   };
 };
