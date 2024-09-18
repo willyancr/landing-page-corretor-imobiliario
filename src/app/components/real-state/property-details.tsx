@@ -9,6 +9,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { api } from "@/app/lib/axios";
 import Image from "next/image";
+import Loading from "../loading";
 
 export default function PropertyDetails({
   params,
@@ -17,6 +18,7 @@ export default function PropertyDetails({
 }) {
   const router = useRouter();
   const [data, setData] = useState<DataRealState>();
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     api
@@ -29,7 +31,7 @@ export default function PropertyDetails({
   }, [params.slug]);
 
   if (!data) {
-    return <p>Carregando...</p>; // Exibe algo enquanto os dados são carregados
+    return <Loading />; // Exibe algo enquanto os dados são carregados
   }
 
   return (
@@ -62,13 +64,17 @@ export default function PropertyDetails({
       </div>
 
       <div className="relative flex flex-col gap-5">
+        {isLoading && (
+          <div className="absolute inset-0 animate-pulse rounded-lg bg-gray-200" />
+        )}
         <Image
           src={data?.attributes.capa.data.attributes.url}
           alt="Imagem do imóvel"
           width={1200}
           height={1200}
           quality={100}
-          className="mx-auto h-[500px] w-full rounded-lg object-cover"
+          className={`mx-auto h-[500px] w-full rounded-lg object-cover ${isLoading ? "opacity-0" : "opacity-100"}`}
+          onLoadingComplete={() => setIsLoading(false)}
         />
 
         <span className="absolute left-6 top-6 w-fit rounded-lg bg-zinc-50 px-3 py-2 font-semibold shadow-xl">

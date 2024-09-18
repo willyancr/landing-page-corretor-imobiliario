@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Redirect from "./redirect";
-
+import { Button } from "@/components/ui/button";
+import { GlobeLock } from "lucide-react";
 
 export default function Header() {
+  const router = useRouter();
   const pathname = usePathname();
   const home = pathname === "/";
   const logoHeader = home ? "/logo-header1.png" : "/logo-header.png";
@@ -28,6 +30,17 @@ export default function Header() {
             {/* <Redirect href="/blog">Blog</Redirect> */}
           </nav>
         </div>
+        <Button>
+          <a
+            href="https://project-stripe-artur.onrender.com/admin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2"
+          >
+            <GlobeLock className="h-5 w-5" />
+            Acesso Restrito
+          </a>
+        </Button>
       </div>
     </header>
   );
