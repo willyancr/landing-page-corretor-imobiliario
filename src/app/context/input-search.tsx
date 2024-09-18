@@ -16,9 +16,9 @@ const SearchContext = React.createContext({} as SearchContextType);
 
 export const SearchProvider = ({ children }: { children: React.ReactNode }) => {
   const [search, setSearch] = React.useState("");
-  const [room, setRoom] = React.useState("");
-  const [transactionType, setTransactionType] = React.useState("");
-  const [typeRealState, setTypeRealState] = React.useState("");
+  const [room, setRoom] = React.useState("todos");
+  const [transactionType, setTransactionType] = React.useState("todos");
+  const [typeRealState, setTypeRealState] = React.useState("todos");
   return (
     <SearchContext.Provider
       value={{

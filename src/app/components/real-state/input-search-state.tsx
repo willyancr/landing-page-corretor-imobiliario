@@ -44,6 +44,7 @@ export default function InputSearchState() {
             <SelectValue placeholder="Imoveis" />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="todos">Todos</SelectItem>
             <SelectItem value="compra">Compra</SelectItem>
             <SelectItem value="venda">Venda</SelectItem>
             <SelectItem value="locacao">Locação</SelectItem>
@@ -55,6 +56,7 @@ export default function InputSearchState() {
             <SelectValue placeholder="Quartos" />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="todos">Todos</SelectItem>
             <SelectItem value="1">1 quarto</SelectItem>
             <SelectItem value="2">2 quartos</SelectItem>
             <SelectItem value="3">3 quartos</SelectItem>
@@ -69,6 +71,7 @@ export default function InputSearchState() {
             <SelectValue placeholder="Tipo" />
           </SelectTrigger>
           <SelectContent>
+            <SelectItem value="todos">Todos</SelectItem>
             <SelectItem value="casa">Casa</SelectItem>
             <SelectItem value="apartamento">Apartamento</SelectItem>
             <SelectItem value="lote">Lote</SelectItem>

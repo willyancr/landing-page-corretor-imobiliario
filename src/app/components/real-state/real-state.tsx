@@ -44,19 +44,20 @@ export default function RealState() {
               ?.includes(search.toLowerCase()),
           )
           .filter((card) =>
-            transactionType
-              ? card.attributes.tipoImoveis?.toLowerCase() ===
-                transactionType.toLowerCase()
-              : true,
+            transactionType === "todos"
+              ? true
+              : card.attributes.tipoImoveis?.toString() === transactionType,
           )
           .filter((card) =>
-            room ? card.attributes.quartos?.toString() === room : true,
+            room === "todos"
+              ? true
+              : card.attributes.quartos?.toString() === room,
           )
           .filter((card) =>
-            typeRealState
-              ? card.attributes.categoria?.data?.attributes?.Titulo?.toLowerCase() ===
-                typeRealState.toLowerCase()
-              : true,
+            typeRealState === "todos"
+              ? true
+              : card.attributes.categoria?.data?.attributes?.Titulo?.toLowerCase() ===
+                typeRealState,
           )
           .map((card) => (
             <div
