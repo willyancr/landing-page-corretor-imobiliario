@@ -45,7 +45,7 @@ export default function ContentAbout() {
             </div>
             <div className="flex-1">
               <Image
-                src={`${process.env.NEXT_PUBLIC_URL_IMAGE}${item.attributes.fotoPerfil.data.attributes.url}`}
+                src={item.attributes.fotoPerfil.data.attributes.url}
                 alt="Logo"
                 width={500}
                 height={500}

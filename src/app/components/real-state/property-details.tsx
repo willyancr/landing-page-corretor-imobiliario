@@ -63,7 +63,7 @@ export default function PropertyDetails({
 
       <div className="relative flex flex-col gap-5">
         <Image
-          src={`${process.env.NEXT_PUBLIC_URL_IMAGE}${data?.attributes.capa.data.attributes.url}`}
+          src={data?.attributes.capa.data.attributes.url}
           alt="Imagem do imóvel"
           width={1200}
           height={1200}
@@ -120,7 +120,7 @@ export default function PropertyDetails({
             {data?.attributes.galeria.data.map((foto) => (
               <Image
                 key={foto.id}
-                src={`${process.env.NEXT_PUBLIC_URL_IMAGE}${foto.attributes.url}`}
+                src={foto.attributes.url}
                 alt="Imagem do imóvel"
                 width={1000}
                 height={1000}

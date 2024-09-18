@@ -28,10 +28,11 @@ export default function Footer() {
           <div key={item.id} className="grid grid-cols-2 items-center">
             <div className="mt-8 flex flex-col gap-2">
               <Image
-                src={`${process.env.NEXT_PUBLIC_URL_IMAGE}${item.attributes.Logo.data.attributes.url}`}
+                src={item.attributes.Logo.data.attributes.url}
                 alt="Logo"
                 width={200}
                 height={200}
+                quality={100}
               />
               <span className="text-sm text-zinc-300">
                 {item.attributes.Endereco}

@@ -12,7 +12,7 @@ export default function DreamHomeSection() {
       <div className="mx-auto flex max-w-[1200px] items-center gap-20 px-12">
         <Image
           src="/dream-home.png"
-          alt="Dream Home"
+          alt="Imagens de imoveis"
           width={450}
           height={500}
           quality={100}

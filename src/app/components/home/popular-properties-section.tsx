@@ -48,7 +48,7 @@ export default function PopularPropertiesSection() {
           >
             <Link href={`/detalhes-imoveis/${card.attributes.slug}`}>
               <Image
-                src={`${process.env.NEXT_PUBLIC_URL_IMAGE}${card.attributes.capa.data.attributes.url}`}
+                src={card.attributes.capa.data.attributes.url}
                 alt="Imagem do imóvel"
                 width={300}
                 height={300}

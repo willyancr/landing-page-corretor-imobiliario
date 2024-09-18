@@ -66,18 +66,18 @@ export default function MainHome() {
           </div>
           <div className="flex justify-center gap-20">
             <Image
-              src={`${process.env.NEXT_PUBLIC_URL_IMAGE}${item.attributes.foto2.data.attributes.url}`}
+              src={item.attributes.foto2.data.attributes.url}
               width={1000}
               height={1000}
-              alt="state home"
+              alt="Imagem do imovel"
               quality={100}
               className="image-home-hidden h-[220px] w-[510px] rounded-lg object-cover shadow-xl"
             />
             <Image
-              src={`${process.env.NEXT_PUBLIC_URL_IMAGE}${item.attributes.foto1.data.attributes.url}`}
+              src={item.attributes.foto1.data.attributes.url}
               width={1000}
               height={1000}
-              alt="state home"
+              alt="Imagem do imovel"
               quality={100}
               className="image-home h-[220px] w-[510px] rounded-lg object-cover shadow-2xl"
             />
