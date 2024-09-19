@@ -27,7 +27,6 @@ export default function Header() {
             <Redirect href="/">Home</Redirect>
             <Redirect href="/imoveis">Imóveis</Redirect>
             <Redirect href="/sobre">Sobre</Redirect>
-            {/* <Redirect href="/blog">Blog</Redirect> */}
           </nav>
         </div>
         <Button>
@@ -38,7 +37,6 @@ export default function Header() {
             className="flex items-center gap-2"
           >
             <GlobeLock className="h-5 w-5" />
-            Acesso Restrito
           </a>
         </Button>
       </div>
