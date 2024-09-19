@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { api } from "@/app/lib/axios";
+import toast from "react-hot-toast";
+import { Loader } from "lucide-react";
 
 export default function CardFormContact({
   params,
@@ -12,6 +14,7 @@ export default function CardFormContact({
   params: { slug: string };
 }) {
   const [data, setData] = useState<DataRealState | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -32,11 +35,12 @@ export default function CardFormContact({
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
+    
     if (!formData.name || !formData.email || !formData.message) {
-      alert("Preencha todos os campos");
+      toast.error("Preencha todos os campos");
       return;
     }
+    setIsLoading(true);
     try {
       const res = await fetch("/api/send-email", {
         method: "POST",
@@ -47,13 +51,15 @@ export default function CardFormContact({
       });
 
       if (res.ok) {
-        alert("Email enviado com sucesso!");
+        toast.success("Email enviado com sucesso!");
         setFormData({ name: "", email: "", message: "" });
       } else {
-        alert("Ocorreu um erro ao enviar o email => " + res.statusText);
+        toast.error("Ocorreu um erro ao enviar o email => " + res.statusText);
       }
     } catch (error) {
       alert("Error de rede" + error);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -94,9 +100,16 @@ export default function CardFormContact({
             value={formData.message}
             onChange={handleChange}
           />
-          <Button className="w-full bg-primary" type="submit">
-            Solicitar informações
-          </Button>
+          {isLoading ? (
+            <Button className="w-full bg-primary" type="submit" disabled>
+              <Loader className="mr-2 h-4 w-4 animate-spin" />
+              Enviando mensagem
+            </Button>
+          ) : (
+            <Button className="w-full bg-primary" type="submit">
+              Solicitar informações
+            </Button>
+          )}
         </CardContent>
       </form>
     </Card>
