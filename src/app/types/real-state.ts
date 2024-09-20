@@ -48,6 +48,7 @@ export type DataRealState = {
   attributes: {
     titulo: string;
     slug: string;
+    endereco: string;
     metragem: number;
     quartos: number;
     banheiros: number;
