@@ -1,6 +1,7 @@
 "use client";
 import PropertyFeaturesList from "./property-features-list";
 import { DataRealState } from "@/app/types/real-state";
+import { useLoadScript } from "@react-google-maps/api";
 import { Bath, BedDouble, House } from "lucide-react";
 import CardFormContact from "./card-form-contact";
 import { Button } from "@/components/ui/button";
@@ -8,8 +9,16 @@ import { FaWhatsapp } from "react-icons/fa6";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { api } from "@/app/lib/axios";
-import Image from "next/image";
 import Loading from "../loading";
+import Map from "../google-map";
+import Image from "next/image";
+
+type Coordinates = {
+  lat: number;
+  lng: number;
+};
+
+const GOOGLE_MAPS_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string;
 
 export default function PropertyDetails({
   params,
@@ -19,8 +28,13 @@ export default function PropertyDetails({
   const router = useRouter();
   const [data, setData] = useState<DataRealState>();
   const [isLoading, setIsLoading] = useState(true);
+  const [coordinates, setCoordinates] = useState<Coordinates | null>(null);
 
-  useEffect(() => {
+  const { isLoaded, loadError } = useLoadScript({
+    googleMapsApiKey: GOOGLE_MAPS_API_KEY,
+  });
+
+  useEffect(() => { 
     api
       .get(
         `/imoveis?filters[slug][$eq]=${params.slug}&populate[capa]=*&populate[galeria]=*&populate[categoria]=*`,
@@ -30,8 +44,28 @@ export default function PropertyDetails({
       });
   }, [params.slug]);
 
+  useEffect(() => {
+    // Carrega a API do Google Maps
+    if (isLoaded && data && data?.attributes.titulo) {
+      // Cria um objeto geocoder
+      const geocoder = new google.maps.Geocoder();
+
+      // Tenta geocodificar o endereço do imóvel
+      geocoder.geocode({ address: data?.attributes.titulo }, (results, status) => {
+        if (status === "OK" && results && results[0]) {
+          // Extrai as coordenadas do resultado
+          const { lat, lng } = results[0].geometry.location;
+          // Atualiza o estado com as coordenadas
+          setCoordinates({ lat: lat(), lng: lng() });
+        } else {
+          console.error("Geocodificação falhou devido a: " + status);
+        }
+      });
+    }
+  }, [isLoaded, data]);
+
   if (!data) {
-    return <Loading />; // Exibe algo enquanto os dados são carregados
+    return <Loading />; 
   }
 
   return (
@@ -116,6 +150,12 @@ export default function PropertyDetails({
         </div>
 
         <PropertyFeaturesList params={params} />
+
+        <div className="my-10 w-full border-b-[1px] border-zinc-200" />
+        <div className="flex flex-col gap-5">
+          <h2 className="text-2xl font-medium">Localização do imóvel no mapa</h2>
+          {coordinates && <Map latitude={coordinates.lat} longitude={coordinates.lng} />}
+        </div>
 
         <div className="my-10 w-full border-b-[1px] border-zinc-200" />
 
