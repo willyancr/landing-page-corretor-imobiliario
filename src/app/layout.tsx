@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
 import "./globals.css";
-import { SearchProvider } from "./context/input-search";
-import { Toaster } from "react-hot-toast";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -25,11 +23,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <SearchProvider>
-      <html lang="pt-br" className={poppins.className}>
-        <Toaster />
-        <body>{children}</body>
-      </html>
-    </SearchProvider>
+    <html lang="pt-br" className={poppins.className}>
+      <body>{children}</body>
+    </html>
   );
 }
