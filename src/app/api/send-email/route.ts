@@ -28,8 +28,8 @@ export async function POST(req: Request) {
   }
 
   const mailOptions: nodemailer.SendMailOptions = {
-    from: "willyancr@gmail.com",
-    to: "willyancr@gmail.com",
+    from: "arturfilh@gmail.com",
+    to: "arturfilh@gmail.com",
     subject: `Novo contato de ${name}`,
     text: message,
     replyTo: email,
