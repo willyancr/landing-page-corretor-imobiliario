@@ -23,10 +23,13 @@ export default function Footer() {
 
   return (
     <div className="bg-zinc-950 bg-home bg-center">
-      <div className="mx-auto max-w-[1200px] px-12 pb-6 pt-16 text-zinc-50">
+      <div className="mx-auto max-w-[1200px] px-4 pb-6 pt-16 text-zinc-50 md:px-12">
         {data?.map((item) => (
-          <div key={item.id} className="grid grid-cols-2 items-center">
-            <div className="mt-8 flex flex-col gap-2">
+          <div
+            key={item.id}
+            className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-0"
+          >
+            <div className="mt-8 flex flex-col items-center gap-2 md:items-start">
               <Image
                 src={item.attributes.Logo.data.attributes.url}
                 alt="Logo"
@@ -34,19 +37,19 @@ export default function Footer() {
                 height={200}
                 quality={100}
               />
-              <span className="text-sm text-zinc-300">
+              <span className="text-center text-sm text-zinc-300 md:text-left">
                 {item.attributes.Endereco}
               </span>
-              <span className="text-sm text-zinc-300">
+              <span className="text-center text-sm text-zinc-300 md:text-left">
                 {item.attributes.Cidade}
               </span>
-              <span className="text-sm text-zinc-300">
+              <span className="text-center text-sm text-zinc-300 md:text-left">
                 CEP: {item.attributes.CEP}
               </span>
             </div>
 
-            <nav className="flex items-center gap-32 font-extralight">
-              <div className="space-y-4">
+            <nav className="flex flex-col items-center gap-8 font-extralight md:flex-row md:items-start md:gap-32">
+              <div className="space-y-4 text-center md:text-left">
                 <span className="font-medium text-primary">Footer Menu</span>
                 <div className="flex flex-col gap-2">
                   <Link
@@ -72,7 +75,8 @@ export default function Footer() {
                   </span>
                 </div>
               </div>
-              <div className="space-y-4">
+
+              <div className="space-y-4 text-center md:text-left">
                 <span className="font-medium text-primary">Redes Sociais</span>
 
                 <div className="flex flex-col gap-2">

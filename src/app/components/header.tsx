@@ -1,35 +1,35 @@
 "use client";
-import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import Redirect from "./redirect";
 import { Button } from "@/components/ui/button";
 import { GlobeLock } from "lucide-react";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import Redirect from "./redirect";
 
 export default function Header() {
-  const router = useRouter();
   const pathname = usePathname();
   const home = pathname === "/";
   const logoHeader = home ? "/logo-header1.png" : "/logo-header.png";
 
   return (
-    <header className="mx-auto w-full max-w-[1200px] px-12">
-      <div className="flex items-center justify-between py-5">
-        <div className="flex items-center gap-20">
+    <header className="mx-auto w-full max-w-[1200px] px-4 sm:px-12">
+      <div className="flex flex-col items-center justify-between py-5 sm:flex-row">
+        <div className="flex flex-col items-center gap-4 sm:flex-row sm:gap-20">
           <Image
             src={logoHeader}
             alt="Logo"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             quality={100}
+            className="w-48 sm:w-auto"
           />
 
-          <nav className="flex h-6 justify-center gap-8 font-extralight text-zinc-50/70">
+          <nav className="flex h-6 justify-center gap-4 font-extralight text-zinc-50/70 sm:gap-8">
             <Redirect href="/">Home</Redirect>
             <Redirect href="/imoveis">Imóveis</Redirect>
             <Redirect href="/sobre">Sobre</Redirect>
           </nav>
         </div>
-        <Button>
+        <Button className="mt-4 hidden sm:mt-0 sm:flex">
           <a
             href="https://project-stripe-artur.onrender.com/admin"
             target="_blank"
