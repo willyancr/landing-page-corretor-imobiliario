@@ -22,24 +22,20 @@ export default function InputSearchState() {
     useSearch();
 
   return (
-    <div className="flex items-center justify-between gap-2 rounded-lg bg-gray-100/70 p-4 text-zinc-900">
-      <div className="flex items-center space-x-2">
+    <div className="flex flex-col items-center justify-between gap-4 rounded-lg bg-gray-100/70 p-4 text-zinc-900 md:flex-row">
+      <div className="flex w-[300px] flex-col items-center space-y-4 md:flex-row md:w-full md:space-x-2 md:space-y-0">
         <MapPinIcon className="h-5 w-5" />
         <Input
           type="text"
           placeholder="Buscar imoveis"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="w-64 placeholder:text-zinc-900"
+          className="w-full placeholder:text-zinc-900 md:w-64"
         />
-        <Button className="bg-primary text-white">
-          Buscar
-          <SearchIcon className="ml-2 h-4 w-4" />
-        </Button>
       </div>
-      <div className="flex items-center space-x-4">
+      <div className="flex w-full flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
         <Select onValueChange={setTransactionType}>
-          <SelectTrigger className="w-40">
+          <SelectTrigger className="w-full md:w-40">
             <ShapesIcon className="h-5 w-5" />
             <SelectValue placeholder="Imoveis" />
           </SelectTrigger>
@@ -51,7 +47,7 @@ export default function InputSearchState() {
           </SelectContent>
         </Select>
         <Select onValueChange={setRoom}>
-          <SelectTrigger className="w-40">
+          <SelectTrigger className="w-full md:w-40">
             <BedDouble className="h-5 w-5" />
             <SelectValue placeholder="Quartos" />
           </SelectTrigger>
@@ -66,7 +62,7 @@ export default function InputSearchState() {
           </SelectContent>
         </Select>
         <Select onValueChange={setTypeRealState}>
-          <SelectTrigger className="w-40">
+          <SelectTrigger className="w-full md:w-40">
             <HomeIcon className="h-5 w-5" />
             <SelectValue placeholder="Tipo" />
           </SelectTrigger>
@@ -77,6 +73,10 @@ export default function InputSearchState() {
             <SelectItem value="lote">Lote</SelectItem>
           </SelectContent>
         </Select>
+        <Button className="w-full bg-primary text-white md:w-auto">
+          Buscar
+          <SearchIcon className="ml-2 h-4 w-4" />
+        </Button>
       </div>
     </div>
   );

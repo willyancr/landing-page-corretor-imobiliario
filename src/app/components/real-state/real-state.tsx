@@ -29,10 +29,10 @@ export default function RealState() {
         <Image
           src="/logo-componente_right.png"
           alt="Image 1"
-          width={30}
-          height={30}
+          width={100}
+          height={100}
           quality={100}
-          className="mt-2.5 rotate-90"
+          className="mt-2.5 size-16 rotate-90 sm:size-10 sm:w-8"
         />
       </div>
 

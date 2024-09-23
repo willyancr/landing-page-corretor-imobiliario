@@ -73,16 +73,18 @@ export default function PropertyDetails({
   }
 
   return (
-    <div className="mx-auto max-w-[1200px] space-y-10 px-12 py-10">
-      <div className="m-auto flex w-[450px] flex-col gap-5">
-        <h1 className="font-CoHeadlineBold text-5xl font-bold">
+    <div className="mx-auto max-w-[1200px] space-y-10 px-4 py-10 sm:px-12">
+      <div className="m-auto flex w-full max-w-[450px] flex-col gap-5">
+        <h1 className="text-center font-CoHeadlineBold text-4xl font-bold md:text-5xl">
           Detalhes do imóvel
         </h1>
 
-        <span className="text-center text-sm">Home / Imóveis / Detalhes</span>
+        <span className="text-center text-xs md:text-sm">
+          Home / Imóveis / Detalhes
+        </span>
 
-        <div className="flex items-center justify-center gap-4">
-          <Button className="w-44">
+        <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
+          <Button className="w-full md:w-44">
             <a
               href="https://api.whatsapp.com/message/T65AYX4JNWVCO1?autoload=1&app_absent=0"
               target="_blank"
@@ -93,7 +95,7 @@ export default function PropertyDetails({
             </a>
           </Button>
           <Button
-            className="w-44 bg-tertiary"
+            className="w-full bg-tertiary md:w-44"
             onClick={() => router.push("/imoveis")}
           >
             Voltar
@@ -111,20 +113,22 @@ export default function PropertyDetails({
           width={1200}
           height={1200}
           quality={100}
-          className={`mx-auto h-[500px] w-full rounded-lg object-cover ${isLoading ? "opacity-0" : "opacity-100"}`}
+          className={`mx-auto h-[300px] w-full rounded-lg object-cover md:h-[500px] ${isLoading ? "opacity-0" : "opacity-100"}`}
           onLoadingComplete={() => setIsLoading(false)}
         />
 
-        <span className="absolute left-6 top-6 w-fit rounded-lg bg-zinc-50 px-3 py-2 font-semibold shadow-xl">
+        <span className="absolute left-4 top-4 w-fit rounded-lg bg-zinc-50 px-2 py-1 text-sm font-semibold shadow-xl md:left-6 md:top-6 md:px-3 md:py-2 md:text-base">
           {data?.attributes.preco.toLocaleString("pt-br", {
             style: "currency",
             currency: "BRL",
           })}
         </span>
 
-        <div className="flex items-center justify-between">
-          <h2 className="text-2xl font-medium">{data?.attributes.titulo}</h2>
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col items-start justify-between md:flex-row md:items-center">
+          <h2 className="text-xl font-medium md:text-2xl">
+            {data?.attributes.titulo}
+          </h2>
+          <div className="flex flex-wrap items-center gap-2">
             <div className="flex w-24 items-center justify-center gap-1 rounded-md bg-tertiary/30 px-3 py-2 text-sm">
               <House size={16} />
               {data?.attributes.metragem}m²
@@ -140,7 +144,7 @@ export default function PropertyDetails({
 
         <div className="my-10 w-full border-b-[1px] border-zinc-200" />
 
-        <div className="mb-10 flex justify-between gap-12">
+        <div className="mb-10 flex flex-col justify-between gap-12 md:flex-row">
           <div className="flex-1 space-y-5">
             <h1 className="text-2xl font-medium">Sobre a propriedade</h1>
             {data?.attributes.descricao.map((text, index) => (
@@ -148,7 +152,7 @@ export default function PropertyDetails({
             ))}
           </div>
 
-          <div className=" ">
+          <div className="w-full md:w-auto">
             <CardFormContact params={params} />
           </div>
         </div>
@@ -169,7 +173,9 @@ export default function PropertyDetails({
         <div className="my-10 w-full border-b-[1px] border-zinc-200" />
 
         <div className="mb-10 space-y-5">
-          <h1 className="text-2xl font-medium">Galeria do imóvel</h1>
+          <h1 className="text-2xl font-medium md:text-2xl">
+            Galeria do imóvel
+          </h1>
 
           <div className="flex flex-wrap justify-center gap-4">
             {data?.attributes.galeria.data.map((foto) => (
@@ -180,7 +186,7 @@ export default function PropertyDetails({
                 width={1000}
                 height={1000}
                 quality={100}
-                className="h-[300px] w-[325px] rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+                className="h-[200px] w-[310px] rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105 sm:h-[300px] sm:w-[250px] md:h-[300px] md:w-[300px]"
               />
             ))}
           </div>
