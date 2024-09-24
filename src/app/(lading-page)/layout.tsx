@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SearchProvider>
       <Toaster />
-      <section>{children}</section>;
+      <section>{children}</section>
     </SearchProvider>
   );
 }

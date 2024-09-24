@@ -71,7 +71,7 @@ export default function MainHome() {
               height={1000}
               alt="Imagem do imovel"
               quality={100}
-              className="image-home-hidden h-[220px] w-full rounded-lg object-cover shadow-xl sm:w-[510px]"
+              className="image-home-hidden hidden h-[220px] w-full rounded-lg object-cover shadow-xl sm:w-[510px]"
             />
             <Image
               src={item.attributes.foto1.data.attributes.url}
@@ -79,7 +79,7 @@ export default function MainHome() {
               height={1000}
               alt="Imagem do imovel"
               quality={100}
-              className="image-home h-[220px] w-full rounded-lg object-cover shadow-2xl sm:w-full"
+              className="image-home h-[220px] w-full rounded-lg object-cover shadow-2xl sm:block sm:w-full"
             />
           </div>
         </main>
