@@ -186,7 +186,7 @@ export default function PropertyDetails({
                 width={1000}
                 height={1000}
                 quality={100}
-                className="h-[200px] w-[310px] rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105 sm:h-[300px] sm:w-[250px] md:h-[300px] md:w-[300px]"
+                className="h-[200px] w-[310px] rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105 sm:h-[300px] sm:w-[250px] md:h-[300px] md:w-[300px] lg:w-[350px]"
               />
             ))}
           </div>
