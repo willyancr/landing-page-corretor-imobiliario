@@ -69,15 +69,15 @@ export default function MainHome() {
               src={item.attributes.foto2.data.attributes.url}
               width={1000}
               height={1000}
-              alt="Imagem do imovel"
+              alt="Imagem do imovel da esquerda"
               quality={100}
-              className="image-home-hidden hidden h-[220px] w-full rounded-lg object-cover shadow-xl sm:w-[510px]"
+              className="image-home-hidden h-[220px] w-full rounded-lg object-cover shadow-xl sm:w-full"
             />
             <Image
               src={item.attributes.foto1.data.attributes.url}
               width={1000}
               height={1000}
-              alt="Imagem do imovel"
+              alt="Imagem do imovel da direita"
               quality={100}
               className="image-home h-[220px] w-full rounded-lg object-cover shadow-2xl sm:block sm:w-full"
             />
