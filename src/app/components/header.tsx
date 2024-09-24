@@ -20,7 +20,7 @@ export default function Header() {
             width={150}
             height={150}
             quality={100}
-            className="w-48 sm:w-auto"
+            className="w-48 "
           />
 
           <nav className="flex h-6 justify-center gap-4 font-extralight text-zinc-50/70 sm:gap-8">
