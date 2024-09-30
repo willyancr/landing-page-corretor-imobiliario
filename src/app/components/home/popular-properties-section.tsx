@@ -21,7 +21,7 @@ export default function PopularPropertiesSection() {
   }, []);
 
   return (
-    <div className="my-text-mt mx-auto max-w-[1200px] space-y-8 px-12 py-12">
+    <div className="my-text-mt container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
       <div className="mb-20 flex items-center justify-between">
         <h1 className="font-CoHeadlineBold text-4xl font-bold">
           Imóveis em destaque
@@ -40,20 +40,17 @@ export default function PopularPropertiesSection() {
           />
         </Link>
       </div>
-      <div className="flex flex-wrap justify-center gap-10 lg:justify-normal">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {data?.map((card) => (
-          <div
-            key={card.id}
-            className="flex w-[460px] flex-col gap-4 md:w-[410px] lg:w-[280px] xl:w-[340px]"
-          >
+          <div key={card.id} className="flex w-full flex-col gap-4">
             <Link href={`/detalhes-imoveis/${card.attributes.slug}`}>
               <Image
                 src={card.attributes.capa.data.attributes.url}
                 alt="Imagem do imóvel"
-                width={300}
+                width={500}
                 height={300}
                 quality={100}
-                className="h-[200px] w-[460px] rounded-md shadow-md transition-all duration-200 ease-linear hover:scale-105 md:w-[410px] lg:w-[280px] xl:w-[340px]"
+                className="h-[200px] w-full rounded-md object-cover shadow-md transition-all duration-200 ease-linear hover:scale-105"
               />
             </Link>
 

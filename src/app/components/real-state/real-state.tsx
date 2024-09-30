@@ -21,8 +21,8 @@ export default function RealState() {
   }, []);
 
   return (
-    <div className="mx-auto my-12 max-w-[1200px] space-y-8 px-12">
-      <div className="flex gap-4">
+    <div className="container mx-auto max-w-[1200px] px-4 py-8 sm:px-6 sm:py-12 lg:px-12 lg:py-16">
+      <div className="mb-10 flex items-center gap-2">
         <h1 className="font-CoHeadlineBold text-4xl font-bold">
           Imóveis disponíveis
         </h1>
@@ -36,7 +36,7 @@ export default function RealState() {
         />
       </div>
 
-      <div className="flex flex-wrap justify-center gap-10 lg:justify-normal">
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {data
           ?.filter((card) =>
             card.attributes.titulo
@@ -60,18 +60,15 @@ export default function RealState() {
                 typeRealState,
           )
           .map((card) => (
-            <div
-              key={card.id}
-              className="flex w-[460px] flex-col gap-4 md:w-[410px] lg:w-[280px] xl:w-[340px]"
-            >
+            <div key={card.id} className="flex flex-col gap-4">
               <Link href={`/detalhes-imoveis/${card.attributes.slug}`}>
                 <Image
                   src={card.attributes.capa.data.attributes.url}
                   alt="Imagem do imóvel"
                   width={300}
-                  height={300}
+                  height={200}
                   quality={100}
-                  className="h-[200px] w-[460px] rounded-md shadow-md transition-all duration-200 ease-linear hover:scale-105 md:w-[410px] lg:w-[280px] xl:w-[340px]"
+                  className="h-48 w-full rounded-md object-cover shadow-md transition-all duration-200 ease-linear hover:scale-105"
                 />
               </Link>
               <div className="w-32 border-b-2 border-zinc-950" />
@@ -85,7 +82,7 @@ export default function RealState() {
                 <span className="text-sm">{card.attributes.titulo}</span>
               </div>
               <div className="w-full border-b-[1px] border-zinc-200" />
-              <div className="flex items-center gap-3 lg:justify-between">
+              <div className="flex items-center justify-between">
                 <BadgeRealState>
                   <House size={16} />
                   {card.attributes.metragem}m²

@@ -12,6 +12,7 @@ import { api } from "@/app/lib/axios";
 import Loading from "../loading";
 import Map from "../google-map";
 import Image from "next/image";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Coordinates = {
   lat: number;
@@ -30,6 +31,10 @@ export default function PropertyDetails({
   const [data, setData] = useState<DataRealState>();
   const [isLoading, setIsLoading] = useState(true);
   const [coordinates, setCoordinates] = useState<Coordinates | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+
+  const openImage = (foto: string) => setSelectedImage(foto);
+  const closeImage = () => setSelectedImage(null);
 
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: GOOGLE_MAPS_API_KEY,
@@ -162,9 +167,7 @@ export default function PropertyDetails({
         <div className="my-10 w-full border-b-[1px] border-zinc-200" />
 
         <div className="flex flex-col gap-5">
-          <h2 className="text-2xl font-medium">
-            Localização do imóvel no mapa
-          </h2>
+          <h2 className="text-2xl font-medium">Localização do imóvel</h2>
           {coordinates && (
             <Map latitude={coordinates.lat} longitude={coordinates.lng} />
           )}
@@ -177,17 +180,32 @@ export default function PropertyDetails({
             Galeria do imóvel
           </h1>
 
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {data?.attributes.galeria.data.map((foto) => (
-              <Image
-                key={foto.id}
-                src={foto.attributes.url}
-                alt="Imagem do imóvel"
-                width={1000}
-                height={1000}
-                quality={100}
-                className="h-[200px] w-[310px] rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105 sm:h-[300px] sm:w-[250px] md:h-[300px] md:w-[300px] lg:w-[350px]"
-              />
+              <div key={foto.id}>
+                <Image
+                  src={foto.attributes.url}
+                  alt="Imagem do imóvel"
+                  onClick={() => openImage(foto.attributes.url)}
+                  width={1000}
+                  height={1000}
+                  quality={100}
+                  className="h-[200px] w-full rounded-lg object-cover shadow-lg transition-transform duration-300 hover:scale-105"
+                />
+                <Dialog open={!!selectedImage} onOpenChange={closeImage}>
+                  <DialogContent className="w-[400px] sm:w-full sm:max-w-3xl md:max-w-4xl">
+                    {selectedImage && (
+                      <Image
+                        src={selectedImage}
+                        alt="Imagem do imóvel"
+                        width={800}
+                        height={600}
+                        className="h-full w-full rounded-lg object-contain"
+                      />
+                    )}
+                  </DialogContent>
+                </Dialog>
+              </div>
             ))}
           </div>
         </div>
