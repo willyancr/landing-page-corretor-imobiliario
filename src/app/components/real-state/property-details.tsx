@@ -2,7 +2,7 @@
 import PropertyFeaturesList from "./property-features-list";
 import { DataRealState } from "@/app/types/real-state";
 import { useLoadScript } from "@react-google-maps/api";
-import { Bath, BedDouble, House } from "lucide-react";
+import { Bath, BedDouble, House, Images, MapPin, Home } from "lucide-react";
 import CardFormContact from "./card-form-contact";
 import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -150,8 +150,11 @@ export default function PropertyDetails({
         <div className="my-10 w-full border-b-[1px] border-zinc-200" />
 
         <div className="mb-10 flex flex-col justify-between gap-12 md:flex-row">
-          <div className="flex-1 space-y-5">
-            <h1 className="text-2xl font-medium">Sobre a propriedade</h1>
+          <div className="flex-1 space-y-10">
+            <h2 className="flex items-center gap-2 border-l-2 border-primary pl-2 text-2xl font-medium md:text-2xl">
+              Sobre a propriedade
+              <Home size={20} />
+            </h2>
             {data?.attributes.descricao.map((text, index) => (
               <p key={index}>{text.children[0].text}</p>
             ))}
@@ -166,8 +169,11 @@ export default function PropertyDetails({
 
         <div className="my-10 w-full border-b-[1px] border-zinc-200" />
 
-        <div className="flex flex-col gap-5">
-          <h2 className="text-2xl font-medium">Localização do imóvel</h2>
+        <div className="mb-10 space-y-10">
+          <h2 className="flex items-center gap-2 border-l-2 border-primary pl-2 text-2xl font-medium md:text-2xl">
+            Localização do imóvel
+            <MapPin size={20} />
+          </h2>
           {coordinates && (
             <Map latitude={coordinates.lat} longitude={coordinates.lng} />
           )}
@@ -175,10 +181,11 @@ export default function PropertyDetails({
 
         <div className="my-10 w-full border-b-[1px] border-zinc-200" />
 
-        <div className="mb-10 space-y-5">
-          <h1 className="text-2xl font-medium md:text-2xl">
+        <div className="mb-10 space-y-10">
+          <h2 className="flex items-center gap-2 border-l-2 border-primary pl-2 text-2xl font-medium md:text-2xl">
             Galeria do imóvel
-          </h1>
+            <Images size={20} />
+          </h2>
 
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
             {data?.attributes.galeria.data.map((foto) => (
@@ -198,8 +205,9 @@ export default function PropertyDetails({
                       <Image
                         src={selectedImage}
                         alt="Imagem do imóvel"
-                        width={800}
-                        height={600}
+                        width={1200}
+                        height={1200}
+                        quality={100}
                         className="h-full w-full rounded-lg object-contain"
                       />
                     )}
