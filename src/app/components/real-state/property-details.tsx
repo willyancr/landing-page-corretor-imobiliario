@@ -1,8 +1,10 @@
 "use client";
+import { Bath, BedDouble, House, Images, MapPin, Home } from "lucide-react";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 import PropertyFeaturesList from "./property-features-list";
 import { DataRealState } from "@/app/types/real-state";
 import { useLoadScript } from "@react-google-maps/api";
-import { Bath, BedDouble, House, Images, MapPin, Home } from "lucide-react";
+import { formatCurrency } from "@/app/utils/moeda";
 import CardFormContact from "./card-form-contact";
 import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa6";
@@ -12,7 +14,6 @@ import { api } from "@/app/lib/axios";
 import Loading from "../loading";
 import Map from "../google-map";
 import Image from "next/image";
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 type Coordinates = {
   lat: number;
@@ -123,10 +124,7 @@ export default function PropertyDetails({
         />
 
         <span className="absolute left-4 top-4 w-fit rounded-lg bg-zinc-50 px-2 py-1 text-sm font-semibold shadow-xl md:left-6 md:top-6 md:px-3 md:py-2 md:text-base">
-          {data?.attributes.preco.toLocaleString("pt-br", {
-            style: "currency",
-            currency: "BRL",
-          })}
+          {formatCurrency(data?.attributes.preco)}
         </span>
 
         <div className="flex flex-col items-start justify-between md:flex-row md:items-center">

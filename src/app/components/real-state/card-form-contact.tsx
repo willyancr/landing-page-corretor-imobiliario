@@ -1,12 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DataRealState } from "@/app/types/real-state";
 import { Textarea } from "@/components/ui/textarea";
+import { formatCurrency } from "@/app/utils/moeda";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
 import { api } from "@/app/lib/axios";
-import toast from "react-hot-toast";
 import { Loader } from "lucide-react";
+import toast from "react-hot-toast";
 
 export default function CardFormContact({
   params,
@@ -35,7 +36,7 @@ export default function CardFormContact({
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
+
     if (!formData.name || !formData.email || !formData.message) {
       toast.error("Preencha todos os campos");
       return;
@@ -68,10 +69,7 @@ export default function CardFormContact({
       <CardHeader>
         <CardTitle className="text-lg font-normal">Valor do Imóvel</CardTitle>
         <p className="text-4xl font-bold">
-          {data?.attributes.preco?.toLocaleString("pt-br", {
-            style: "currency",
-            currency: "BRL",
-          })}
+          {formatCurrency(data?.attributes.preco ?? 0)}
         </p>
       </CardHeader>
       <form onSubmit={handleSubmit}>

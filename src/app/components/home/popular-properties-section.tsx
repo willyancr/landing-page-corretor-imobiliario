@@ -1,11 +1,13 @@
 "use client";
+
 import { DataRealState } from "@/app/types/real-state";
+import { Bath, BedDouble, House } from "lucide-react";
+import { formatCurrency } from "@/app/utils/moeda";
 import BadgeRealState from "./badge-real-state";
-import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import { api } from "@/app/lib/axios";
-import { House, BedDouble, Bath } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function PopularPropertiesSection() {
   const [data, setData] = useState<DataRealState[]>([]);
@@ -58,10 +60,7 @@ export default function PopularPropertiesSection() {
 
             <div className="flex flex-col">
               <span className="text-2xl font-semibold">
-                {card.attributes.preco.toLocaleString("pt-BR", {
-                  style: "currency",
-                  currency: "BRL",
-                })}
+                {formatCurrency(card.attributes.preco)}
               </span>
               <span className="text-sm">{card.attributes.titulo}</span>
             </div>
