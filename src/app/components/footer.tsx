@@ -105,7 +105,8 @@ export default function Footer() {
           </div>
         ))}
         <span className="mt-16 flex justify-center text-sm font-light text-tertiary/50">
-          © 2024. Todos os direitos reservados | Desenvolvido por{" "}
+          © <span className="ml-1">{new Date().getFullYear()}</span>. Todos os
+          direitos reservados | Desenvolvido por{" "}
           <a
             href="https://github.com/willyancr"
             target="_blank"
