@@ -22,8 +22,8 @@ export default function Footer() {
   }, []);
 
   return (
-    <div className="bg-zinc-950 bg-home bg-center">
-      <div className="mx-auto max-w-[1200px] px-4 pb-6 pt-16 text-zinc-50 md:px-12">
+    <footer className="bg-zinc-950 bg-home bg-center">
+      <div className="mx-auto max-w-[1200px] px-4 pb-6 pt-8 text-zinc-50 md:px-12">
         {data?.map((item) => (
           <div
             key={item.id}
@@ -104,7 +104,7 @@ export default function Footer() {
             </nav>
           </div>
         ))}
-        <span className="mt-10 flex justify-center text-sm font-light text-tertiary/70">
+        <span className="mt-16 flex justify-center text-sm font-light text-tertiary/50">
           © 2024. Todos os direitos reservados | Desenvolvido por{" "}
           <a
             href="https://github.com/willyancr"
@@ -115,6 +115,6 @@ export default function Footer() {
           </a>
         </span>
       </div>
-    </div>
+    </footer>
   );
 }
