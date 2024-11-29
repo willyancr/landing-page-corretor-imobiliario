@@ -8,7 +8,7 @@ import Redirect from "./redirect";
 export default function Header() {
   const pathname = usePathname();
   const home = pathname === "/";
-  const logoHeader = home ? "/logo-header1.png" : "/logo-header.png";
+  const logoHeader = home ? "/logo-new.svg" : "/logo-new-blue.svg";
 
   return (
     <header className="mx-auto w-full max-w-[1200px] px-4 sm:px-12">
@@ -37,6 +37,7 @@ export default function Header() {
             className="flex items-center gap-2"
           >
             <GlobeLock className="h-5 w-5" />
+            
           </a>
         </Button>
       </div>

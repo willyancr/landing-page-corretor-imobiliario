@@ -14,6 +14,7 @@ import { api } from "@/app/lib/axios";
 import Loading from "../loading";
 import Map from "../google-map";
 import Image from "next/image";
+import NotFoundProperty from "./not-found-property";
 
 type Coordinates = {
   lat: number;
@@ -37,7 +38,7 @@ export default function PropertyDetails({
   const openImage = (foto: string) => setSelectedImage(foto);
   const closeImage = () => setSelectedImage(null);
 
-  const { isLoaded, loadError } = useLoadScript({
+  const { isLoaded } = useLoadScript({
     googleMapsApiKey: GOOGLE_MAPS_API_KEY,
   });
 
