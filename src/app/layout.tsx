@@ -9,7 +9,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Artur Ribeiro | Consultor Imobiliário",
+  title: "Blue House | Corretora Imobiliária",
   description:
     "Quer Comprar, Vender ou Locar imóveis? Este é o lugar certo para você encontrar informações sobre nossos serviços e como nossos imóveis podem melhorar sua vida.",
   icons: {
