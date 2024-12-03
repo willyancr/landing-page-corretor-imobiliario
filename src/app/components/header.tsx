@@ -31,7 +31,7 @@ export default function Header() {
         </div>
         <Button className="mt-4 hidden sm:mt-0 sm:flex">
           <a
-            href="https://project-stripe-artur.onrender.com/admin"
+            href="https://bluehouse-strapi.up.railway.app/admin"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-2"
