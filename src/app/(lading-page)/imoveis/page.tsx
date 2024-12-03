@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Imóveis | Artur Ribeiro",
+  title: "Imóveis | Blue House",
 };
 
 export default function Imoveis() {

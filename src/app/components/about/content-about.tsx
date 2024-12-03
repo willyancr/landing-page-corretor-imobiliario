@@ -27,7 +27,7 @@ export default function ContentAbout() {
           >
             <div className="flex flex-1 flex-col gap-5 md:gap-10">
               <h1 className="font-CoHeadlineBold text-4xl font-bold text-primary md:text-5xl lg:text-6xl">
-                Artur Ribeiro
+                Fernando Seabra
               </h1>
               <p className="text-2xl font-bold md:text-3xl">Sobre mim</p>
               {item.attributes.descricao.map((block, index) => (
