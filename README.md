@@ -1,4 +1,4 @@
-# Landing Page - Consultor Imobiliário
+# Blue House - Consultora Imobiliária
 
 Este é um projeto de uma landing page para um consultor imobiliário, desenvolvida usando Next.js e Strapi como CMS.
 
