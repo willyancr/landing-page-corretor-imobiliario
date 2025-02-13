@@ -93,7 +93,7 @@ export default function PropertyDetails({
         <div className="flex flex-col items-center justify-center gap-4 md:flex-row">
           <Button className="w-full md:w-44">
             <a
-              href="https://api.whatsapp.com/message/T65AYX4JNWVCO1?autoload=1&app_absent=0"
+              href="https://api.whatsapp.com"
               target="_blank"
               className="flex items-center gap-2"
             >
