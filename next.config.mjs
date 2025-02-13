@@ -2,7 +2,7 @@
 const nextConfig = {
   images: {
     domains: ["127.0.0.1"],
-    domains: ["bluehouse-strapi.fly.dev"],
+    domains: ["project-stripe-artur-production.up.railway.app"],
     domains: ["res.cloudinary.com"],
   },
 };
